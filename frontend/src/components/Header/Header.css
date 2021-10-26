@@ -1,0 +1,16 @@
+.logo-style {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scale(1.3);
+}
+
+.icon {
+  font-size: 1.2rem;
+  margin-bottom: 0.23rem;
+}
+.mt-6 {
+  margin-top: 5rem;
+}
+.bg-offWhite {
+  background: #fffafa;
+}

@@ -1,0 +1,14 @@
+.homeGridScroll {
+  overflow-x: scroll;
+}
+
+.homeGridScroll::-webkit-scrollbar {
+  display: none;
+}
+.homeHeight {
+  height: auto;
+}
+.header-img-size {
+  width: 100px;
+  height: 100px;
+}
