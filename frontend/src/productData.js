@@ -70,40 +70,4 @@ export const products = [
         discount: 'Grab Now',
         tagline: 'Best Seller'
     },
-    {
-        id: 'product5',
-        url: 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=398&q=80',
-
-        detailUrl: 'https://rukminim1.flixcart.com/image/416/416/k3uhhu80/hair-dryer/n/m/t/nova-2800-w-professional-nhp-8220-original-imafmvwfhmzsxdrw.jpeg?q=70',
-        title: {
-            shortTitle: 'Trimmers, Dryers & more',
-            longTitle: 'Nova Professional NHP 8220 Hair Dryer  (1800 W, Multicolor)'
-        },
-        price: {
-            mrp: 1899,
-            cost: 1124,
-            discount: '40%'
-        },
-        description: '',
-        discount: 'From ₹499',
-        tagline: 'Kubra, Nova & more'
-    },
-    {
-        id: 'product6',
-        url: 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=329&q=80',
-
-        detailUrl: 'https://rukminim1.flixcart.com/image/416/416/kk01pjk0/fan/d/d/l/tiktik-quiet-portable-table-fan-zigma-original-imafzg7ftzuckpad.jpeg?q=70',
-        title: {
-            shortTitle: 'Table Fans',
-            longTitle: 'Portable 300 mm Ultra High Speed 3 Blade Table Fan  (Black, Pack of 1)'
-        },
-        price: {
-            mrp: 2250,
-            cost: 1199,
-            discount: '46%'
-        },
-        description: 'Table Fan. Perfect size fan for use on a table, desk or in an RV. Whisper quiet, powerful airflow and reliable operation in a compact 6" size. Two adjustable speeds to customize airflow: high or low settings. Tough break-resistant ABS plastic blades. ',
-        discount: 'Minimum 40% Off',
-        tagline: 'Top Selling'
-    }
 ];

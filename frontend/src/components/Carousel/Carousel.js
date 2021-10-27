@@ -1,39 +1,60 @@
 import React from 'react'
-
+import './Carousel.css'
 const Carousel = () => {
     return (
         <div>
-            <div id="carouselExampleCaptions" className="carousel slide p-2" data-bs-ride="carousel">
-                <div className="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <div class="row">
+                <div class="example-1 car-carousel">
+                    <div class="wrapper">
+                        <div class="date">
+                            <span class="day">12</span>
+                            <span class="month">Aug</span>
+                            <span class="year">2016</span>
+                        </div>
+                        <div class="data">
+                            <div class="content">
+                                <span class="author">Jane Doe</span>
+                                <h1 class="title"><a href="/">Boxing icon has the will for a couple more fights</a></h1>
+                                <p class="text">The highly anticipated world championship fight will take place at 10am and is the second major boxing blockbuster in the nation after 43 years.</p>
+                                <label for="show-menu" class="menu-button"><span></span></label>
+                            </div>
+                            <input type="checkbox" id="show-menu" />
+                            <ul class="menu-content">
+                                <li>
+                                    {/* <a href="/" class="fa fa-bookmark-o"></a> */}
+                                </li>
+                                <li><a href="/" class="fa fa-heart-o"><span>47</span></a></li>
+                                <li><a href="/" class="fa fa-comment-o"><span>8</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div className="carousel-inner">
-                    <div className="carousel-item active" style={{ height: "200px" }}>
-                        <img src="https://rukminim1.flixcart.com/flap/3376/560/image/ae9966569097a8b7.jpg?q=50" className="d-block w-100" style={{ minHeight: "200px" }} alt="..." />
-                        <div className="carousel-caption d-none d-md-block">
+                <div class="example-2 car-carousel">
+                    <div class="wrapper">
+                        <div class="header">
+                            <div class="date">
+                                <span class="day">12</span>
+                                <span class="month">Aug</span>
+                                <span class="year">2016</span>
+                            </div>
+                            <ul class="menu-content">
+                                <li>
+                                    {/* <a href="/" class="fa fa-bookmark-o"></a> */}
+                                </li>
+                                <li><a href="/" class="fa fa-heart-o"><span>18</span></a></li>
+                                <li><a href="/" class="fa fa-comment-o"><span>3</span></a></li>
+                            </ul>
                         </div>
-                    </div>
-                    <div className="carousel-item" style={{ height: "200px" }}>
-                        <img src="https://rukminim1.flixcart.com/flap/3376/560/image/57267a180af306fe.jpg?q=50" className="d-block w-100" style={{ minHeight: "200px" }} alt="..." />
-                        <div className="carousel-caption d-none d-md-block">
-                        </div>
-                    </div>
-                    <div className="carousel-item" style={{ height: "200px" }}>
-                        <img src="https://rukminim1.flixcart.com/flap/3376/560/image/d117a62eb5fbb8e1.jpg?q=50" className="d-block w-100" style={{ minHeight: "200px" }} alt="..." />
-                        <div className="carousel-caption d-none d-md-block">
+                        <div class="data">
+                            <div class="content">
+                                <span class="author">Jane Doe</span>
+                                <h1 class="title"><a href="/">Stranger Things: The sound of the Upside Down</a></h1>
+                                <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
+                                <a href="/" class="button">Read more</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
     )
