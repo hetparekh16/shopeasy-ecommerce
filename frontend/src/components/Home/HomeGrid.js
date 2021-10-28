@@ -8,7 +8,7 @@ const HomeGrid = () => {
                 // for(let i=0 : i<data.length : i++){
                 homeGridData.map(data => (
                     <div className="text-center m-2 handPointer" key={data.url}>
-                        <img src={data.url} className="header-img-size" style={{ background: "rgb(221 231 221)", borderRadius: "50%" }} alt="..." />
+                        <img src={data.url} className="header-img-size" style={{ background: "rgb(190 191 193 / 25%)", borderRadius: "50%" }} alt="..." />
                         <p>{data.text}</p>
                     </div>
                 ))

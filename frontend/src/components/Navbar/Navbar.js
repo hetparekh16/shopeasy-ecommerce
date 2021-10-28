@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 
-const handleClick = () => {
-    document.body.classList.toggle('nav-active')
-}
 const Navbar = () => {
+    const [hideDisplay, sethideDisplay] = useState(true)
+    const handleClick = () => {
+        document.body.classList.toggle('nav-active')
+        hideDisplay ? sethideDisplay(false) : sethideDisplay(true)
+    }
     return (
         <>
             <div className="menu-icon" onClick={handleClick}>
@@ -13,8 +15,8 @@ const Navbar = () => {
                 <span className="menu-icon__line menu-icon__line-right"></span>
             </div>
 
-            <div className="nav">
-                <div className="nav__content">
+            <div className="nav nav-shopeasy">
+                <div className="nav__content" style={{ display: hideDisplay ? 'none' : 'block' }}>
                     <ul className="nav__list">
                         <li className="nav__list-item">Home</li>
                         <li className="nav__list-item">About</li>
