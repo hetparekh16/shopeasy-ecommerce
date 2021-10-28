@@ -8,16 +8,16 @@ const Slider = (props) => {
             <br />
             <h2 className="text-center mt-5">{props.title} </h2>
             <hr className="m-auto" style={{ maxWidth: "80%", marginBottom: '10px' }} />
-            <main class="page-slider-content">
+            <main className="page-slider-content">
                 {
                     products.map(product => {
-                        return <div class="card-slider" style={{
+                        return <div className="card-slider" key={product.id} style={{
                             background: `url(${product.url}) no-repeat center center/cover`
                         }}>
-                            <div class="slider-content">
-                                <h2 class="slider-title">{product.title.shortTitle} </h2>
-                                <p class="copy">{product.title.longTitle} </p>
-                                <button class="slider-btn">Add to Cart</button>
+                            <div className="slider-content">
+                                <h2 className="slider-title">{product.title.shortTitle} </h2>
+                                <p className="copy">{product.title.longTitle} </p>
+                                <button className="slider-btn">Add to Cart</button>
                             </div>
                         </div>
                     })

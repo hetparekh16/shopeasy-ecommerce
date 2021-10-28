@@ -15,6 +15,7 @@ function App() {
             <Cart />
           </Route>
         </Switch>
+
       </div>
     </Router>
   );
