@@ -10,3 +10,11 @@ export const authenticateSignUp = async (user) => {
         console.log(err);
     }
 }
+export const authenticateLogIn = async (user) => {
+    try {
+        return await axios.post(`${backendURL}/login`, user)
+    }
+    catch (err) {
+        console.log(err.message);
+    }
+}

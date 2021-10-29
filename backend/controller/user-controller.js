@@ -16,3 +16,17 @@ export const userSignup = async (req, res) => {
     }
     return "Hello from signup"
 }
+
+export const userLogin = async (req, res) => {
+    try {
+        const user = await User.findOne({ username: req.body.username, password: req.body.password })
+        if (user) {
+            return res.status(200).json(`${req.body.username} Logged in Successfully`)
+        } else {
+            return res.status(401).json(`${req.body.username} does not exist`)
+        }
+    } catch (err) {
+        console.log(err.message);
+    }
+    return "Hello from signup"
+}

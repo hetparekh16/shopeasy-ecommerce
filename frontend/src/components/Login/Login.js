@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Login.css'
 import crossIcon from '../../img/icons/close.png'
-import { authenticateSignUp } from '../../service/api'
+import { authenticateSignUp, authenticateLogIn } from '../../service/api'
 const Login = (props) => {
     const signupinitialvalues = {
         name: "",
@@ -11,7 +11,14 @@ const Login = (props) => {
         phone: "",
     }
 
+    const loginInitionValues = {
+        username: "",
+        password: "",
+    }
+
     const [signup, setSignup] = useState(signupinitialvalues)
+    const [login, setLogin] = useState(loginInitionValues)
+    const [error, setError] = useState(false)
     const handleSignIn = () => {
         document.querySelector('#modalContainer').classList.remove('right-panel-active')
         // console.log('Yes Sign In');
@@ -30,8 +37,23 @@ const Login = (props) => {
         props.setAccount(signup.username)
         handleCloseButton()
     }
+    const loginApiCall = async (e) => {
+        e.preventDefault()
+        let response = await authenticateLogIn(login)
+        if (!response) {
+            setError(true);
+            return
+        };
+        props.setAccount(login.username)
+        handleCloseButton()
+    }
+
+
     const onInputChange = (e) => {
         setSignup({ ...signup, [e.target.name]: e.target.value })
+    }
+    const onValueChange = (e) => {
+        setLogin({ ...login, [e.target.name]: e.target.value })
     }
     return (
         <>
@@ -56,10 +78,13 @@ const Login = (props) => {
                                 <form className="modalForm" action="#">
                                     <h1 className="title">Sign in</h1>
                                     <span className="spanText">or use your account</span>
-                                    <input className="input-modal" type="email" placeholder="Email" />
-                                    <input className="input-modal" type="password" placeholder="Password" />
+                                    <input onChange={(e) => onValueChange(e)} className="input-modal" name="username" type="name" placeholder="username" />
+                                    <input onChange={(e) => onValueChange(e)} className="input-modal" name="password" type="password" placeholder="Password" />
+                                    {
+                                        error && <p className="error-text"> Invalid Credentials </p>
+                                    }
                                     <a href="/" className="anchorText">Forgot your password?</a>
-                                    <button className="modalButton">Sign In</button>
+                                    <button className="modalButton" onClick={(e) => loginApiCall(e)}>Sign In</button>
                                 </form>
                             </div>
                             <div className="overlay-container">

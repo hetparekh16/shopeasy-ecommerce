@@ -9,13 +9,13 @@ const Carousel = () => {
                         <div className="date">
                             <span className="day">12</span>
                             <span className="month">Aug</span>
-                            <span className="year">2016</span>
+                            <span className="year">2021</span>
                         </div>
                         <div className="data">
                             <div className="content">
-                                <span className="author">Jane Doe</span>
-                                <h1 className="title"><a href="/">Boxing icon has the will for a couple more fights</a></h1>
-                                <p className="text">The highly anticipated world championship fight will take place at 10am and is the second major boxing blockbuster in the nation after 43 years.</p>
+                                <span className="author">Het Parekh</span>
+                                <h1 className="title"><a href="/">This is a demo product</a></h1>
+                                <p className="text">After thinking a bit I will decide what to put in demo product description</p>
                                 <label htmlFor="show-menu" className="menu-button"><span></span></label>
                             </div>
                             <input type="checkbox" id="show-menu" />
@@ -47,9 +47,9 @@ const Carousel = () => {
                         </div>
                         <div className="data">
                             <div className="content">
-                                <span className="author">Jane Doe</span>
-                                <h1 className="title"><a href="/">Stranger Things: The sound of the Upside Down</a></h1>
-                                <p className="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
+                                <span className="author">Het Parekh</span>
+                                <h1 className="title"><a href="/">Still I am not sure about this title</a></h1>
+                                <p className="text">Let's see what we can do about this descripion thing</p>
                                 <a href="/" className="button">Read more</a>
                             </div>
                         </div>
