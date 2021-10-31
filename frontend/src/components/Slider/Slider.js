@@ -1,5 +1,5 @@
 import React from 'react'
-import { products } from '../../productData';
+
 import './Slider.css'
 
 const Slider = (props) => {
@@ -10,7 +10,7 @@ const Slider = (props) => {
             <hr className="m-auto" style={{ maxWidth: "80%", marginBottom: '10px' }} />
             <main className="page-slider-content">
                 {
-                    products.map(product => {
+                    props.products.map(product => {
                         return <div className="card-slider" key={product.id} style={{
                             background: `url(${product.url}) no-repeat center center/cover`
                         }}>
