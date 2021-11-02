@@ -33,73 +33,29 @@
   margin-bottom: 25px;
   transition: 0.4s;
 }
-/* .black,
-.red,
-.white,
-.yellow {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  transition: 0.3s;
-  cursor: pointer;
-  border: 1px solid transparent;
-}
-.black:hover {
-  border: 1px solid #000;
-}
-.black::before {
-  content: "";
-  background: #000;
-  width: 19px;
-  height: 19px;
-  display: block;
-  border-radius: 50%;
+.stars-outer {
+  display: inline-block;
   position: relative;
-  top: 2px;
-  left: 2px;
+  font-family: FontAwesome;
 }
-.red:hover {
-  border: 1px solid #ff0000;
+
+.stars-outer::before {
+  content: "\f006 \f006 \f006 \f006 \f006";
 }
-.red::before {
-  content: "";
-  background: #ff0000;
-  width: 19px;
-  height: 19px;
-  display: block;
-  border-radius: 50%;
-  position: relative;
-  top: 2px;
-  left: 2px;
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
 }
-.white:hover {
-  border: 1px solid #fff;
+
+.stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: #f8ce0b;
 }
-.white::before {
-  content: "";
-  background: #fff;
-  width: 19px;
-  height: 19px;
-  display: block;
-  border-radius: 50%;
-  position: relative;
-  top: 2px;
-  left: 2px;
-}
-.yellow:hover {
-  border: 1px solid #ffff00;
-}
-.yellow::before {
-  content: "";
-  background: #ffff00;
-  width: 19px;
-  height: 19px;
-  display: block;
-  border-radius: 50%;
-  position: relative;
-  top: 2px;
-  left: 2px;
-} */
 
 .colors {
   display: flex;
