@@ -16,9 +16,9 @@ const Home = () => {
             <HomeGrid />
             <Carousel />
             <Slider title="Trending Items" products={products} />
-            <Slider title="On Sale" products={products} />
+            {/* <Slider title="On Sale" products={products} />
             <Slider title="Customers Choice" products={products} />
-            <Slider title="Best Feedback" products={products} />
+            <Slider title="Best Feedback" products={products} /> */}
         </div>
     )
 }

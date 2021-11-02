@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './Slider.css'
 
@@ -10,25 +11,21 @@ const Slider = (props) => {
             <hr className="m-auto" style={{ maxWidth: "80%", marginBottom: '10px' }} />
             <main className="page-slider-content">
                 {
-                    props.products.map(product => {
-                        return <div className="card-slider" key={product.id} style={{
-                            background: `url(${product.url}) no-repeat center center/cover`
-                        }}>
-                            <div className="slider-content">
-                                <h2 className="slider-title">{product.title.shortTitle} </h2>
-                                <p className="copy">{product.title.longTitle} </p>
-                                <button className="slider-btn">Add to Cart</button>
+                    props.products.map(product => (
+                        <Link to={`/product/${product.id}`} key={product.id} >
+                            {/* {console.log(product)} */}
+                            <div className="card-slider" style={{ background: `url(${product.image}) no-repeat center center/contain` }}>
+                                <div className="slider-content">
+                                    <h2 className="slider-title">{product.title} </h2>
+                                    <p className="copy">{product.category} </p>
+                                    <button className="slider-btn">Buy Now</button>
+                                </div>
                             </div>
-                        </div>
-                    })
+                        </Link>
+                    ))
 
                 }
             </main>
-            <div>
-                {
-
-                }
-            </div >
         </>
     )
 }

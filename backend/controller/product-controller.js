@@ -7,5 +7,13 @@ export const getProduct = async (req, res) => {
     } catch (err) {
         console.log(err);
     }
-    return "Hello from product"
+}
+
+export const getProductById = async (req, res) => {
+    try {
+        const product = await productSchema.findOne({ 'id': req.params.id })
+        res.json(product)
+    } catch (err) {
+        console.log(err.message);
+    }
 }

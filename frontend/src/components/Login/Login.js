@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Login.css'
+import { Link } from 'react-router-dom'
 import crossIcon from '../../img/icons/close.png'
 import { authenticateSignUp, authenticateLogIn } from '../../service/api'
 const Login = (props) => {
@@ -83,7 +84,7 @@ const Login = (props) => {
                                     {
                                         error && <p className="error-text"> Invalid Credentials </p>
                                     }
-                                    <a href="/" className="anchorText">Forgot your password?</a>
+                                    <Link to="/" className="anchorText">Forgot your password?</Link>
                                     <button className="modalButton" onClick={(e) => loginApiCall(e)}>Sign In</button>
                                 </form>
                             </div>

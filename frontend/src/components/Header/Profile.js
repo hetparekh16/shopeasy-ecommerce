@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 const Profile = ({ account, setAccount }) => {
 
     const handleLogout = () => [
@@ -6,12 +7,12 @@ const Profile = ({ account, setAccount }) => {
     ]
     return (
         <div className="dropdown d-inline mx-3">
-            <a className="btn btn-secondary dropdown-toggle" href="/" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <Link className="btn btn-secondary dropdown-toggle" to="/" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                 Hi ! {account}
-            </a>
+            </Link>
 
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a className="dropdown-item" href="/" onClick={handleLogout}>Logout</a></li>
+                <li><Link className="dropdown-item" to="/" onClick={handleLogout}>Logout</Link></li>
             </ul>
         </div>
     )

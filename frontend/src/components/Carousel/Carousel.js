@@ -1,5 +1,7 @@
 import React from 'react'
 import './Carousel.css'
+import { Link } from 'react-router-dom'
+
 const Carousel = () => {
     return (
         <div>
@@ -14,21 +16,20 @@ const Carousel = () => {
                         <div className="data">
                             <div className="content">
                                 <span className="author">Het Parekh</span>
-                                <h1 className="title"><a href="/">This is a demo product</a></h1>
+                                <h1 className="title"><Link to="/">This is a demo product</Link></h1>
                                 <p className="text">After thinking a bit I will decide what to put in demo product description</p>
                                 <label htmlFor="show-menu" className="menu-button"><span></span></label>
                             </div>
                             <input type="checkbox" id="show-menu" />
                             <ul className="menu-content">
                                 <li>
-                                    {/* <a href="/" className="fa fa-bookmark-o"></a> */}
                                 </li>
-                                <li><a href="/" className="fa fa-heart-o"><span>47</span></a></li>
-                                <li><a href="/" className="fa fa-comment-o"><span>8</span></a></li>
+                                <li><Link to="/" className="fa fa-heart-o"><span>47</span></Link></li>
+                                <li><Link to="/" className="fa fa-comment-o"><span>8</span></Link></li>
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div >
                 <div className="example-2 car-carousel">
                     <div className="wrapper">
                         <div className="header">
@@ -39,24 +40,23 @@ const Carousel = () => {
                             </div>
                             <ul className="menu-content">
                                 <li>
-                                    {/* <a href="/" className="fa fa-bookmark-o"></a> */}
                                 </li>
-                                <li><a href="/" className="fa fa-heart-o"><span>18</span></a></li>
-                                <li><a href="/" className="fa fa-comment-o"><span>3</span></a></li>
+                                <li><Link to="/" className="fa fa-heart-o"><span>18</span></Link></li>
+                                <li><Link to="/" className="fa fa-comment-o"><span>3</span></Link></li>
                             </ul>
                         </div>
                         <div className="data">
                             <div className="content">
                                 <span className="author">Het Parekh</span>
-                                <h1 className="title"><a href="/">Still I am not sure about this title</a></h1>
+                                <h1 className="title"><Link to="/">Still I am not sure about this title</Link></h1>
                                 <p className="text">Let's see what we can do about this descripion thing</p>
-                                <a href="/" className="button">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                <Link to="/" className="button">Read more</Link>
+                            </div >
+                        </div >
+                    </div >
+                </div >
+            </div >
+        </div >
     )
 }
 
