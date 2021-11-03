@@ -1,18 +1,24 @@
 import { useEffect } from 'react'
-import { useSelector, useDispatch, connect } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { getProductDetails } from '../../redux/actions/productActions';
 import './DetailView.css'
 import shopCart from '../../img/icons/shopping-cart.png'
 import thunder from '../../img/icons/thunder.png'
+import { addToCart } from '../../redux/actions/cartActions';
+import { useHistory } from 'react-router-dom'
 const DetailView = ({ match }) => {
 
     const { product } = useSelector(state => state.getProductDetails)
     const dispatch = useDispatch();
-
+    const history = useHistory()
     useEffect(() => {
         dispatch(getProductDetails(match.params.id))
     }, [dispatch])
 
+    const handleAddToCart = () => {
+        dispatch(addToCart(product.id));
+        history.push('/cart')
+    }
 
     return (
         <>
@@ -44,10 +50,10 @@ const DetailView = ({ match }) => {
                                     <div className="buttons">
                                         <div className="row">
                                             <div className="col-md-6">
-                                                <a href="#" className="custom-btn"><img style={{ filter: 'invert(1)', marginBottom: '5px', marginRight: '3px' }} src={shopCart} alt="" /> Add To Cart</a>
+                                                <button onClick={() => handleAddToCart()} className="custom-btn"><img style={{ filter: 'invert(1)', marginBottom: '5px', marginRight: '3px' }} src={shopCart} alt="" /> Add To Cart</button>
                                             </div>
                                             <div className="col-md-6">
-                                                <a href="#" className="custom-btn"><img style={{ filter: 'invert(1)', marginBottom: '5px', marginRight: '3px' }} src={thunder} alt="" />Buy Now</a>
+                                                <button className="custom-btn"><img style={{ filter: 'invert(1)', marginBottom: '5px', marginRight: '3px' }} src={thunder} alt="" />Buy Now</button>
                                             </div>
                                         </div>
                                     </div>

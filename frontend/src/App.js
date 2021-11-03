@@ -16,7 +16,7 @@ function App() {
               <Home />
             </Route>
             <Route exact path="/cart">
-              <Cart />
+              <Cart style={{ background: 'linear-gradient(to right, #eecda3, #ef629f)' }} />
             </Route>
             <Route exact path='/product/:id' component={DetailView}>
             </Route>
