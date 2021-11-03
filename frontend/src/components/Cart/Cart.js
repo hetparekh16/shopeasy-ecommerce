@@ -4,6 +4,9 @@ import deleteIcon from '../../img/icons/delete.png'
 import { removeFromCart } from '../../redux/actions/cartActions'
 import { Link } from 'react-router-dom'
 import QuantityButton from '../QuantityButton/QuantityButton'
+import { payUsingPaytm } from '../../service/api';
+import { post } from '../../utils/paytm';
+
 const Cart = () => {
     const { cartItems } = useSelector(state => state.cart)
     const [price, setPrice] = useState(0)
@@ -23,6 +26,15 @@ const Cart = () => {
         })
         setPrice(tempPrice)
     }
+    const buyNow = async () => {
+        let response = await payUsingPaytm({ amount: 500, email: 'hetparekh16@gmail.com' })
+        var information = {
+            action: 'https://securegw-stage.paytm.in/order/process',
+            params: response
+        }
+        post(information)
+    }
+
     return (
         <>
             {
@@ -108,7 +120,7 @@ const Cart = () => {
                                                     <li className="d-flex justify-content-between py-3 border-bottom"><strong className="text-muted">Total</strong>
                                                         <h5 className="font-weight-bold">$ {(price + 10).toFixed(2)}</h5>
                                                     </li>
-                                                </ul><Link to="/" className="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</Link>
+                                                </ul><button onClick={() => buyNow()} className="btn btn-dark rounded-pill py-2 btn-block">Procceed to checkout</button>
                                             </div>
                                         </div>
                                     </div>
